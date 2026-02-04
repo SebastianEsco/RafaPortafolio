@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" class="project-page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="project_template_title">Proyecto | Rafael González</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="dark-theme">
+    <nav id="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo" data-i18n="nav_name">Rafael González</a>
+            <div class="lang-switcher">
+                <button id="lang-es" class="lang-btn active">ES</button>
+                <button id="lang-en" class="lang-btn">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container project-detail-container">
+            <div class="back-nav reveal">
+                <a href="index.html#portfolio" class="back-link">
+                    <span class="back-icon">←</span> <span data-i18n="back_to_portfolio">Volver al Portafolio</span>
+                </a>
+            </div>
+
+            <header class="project-header reveal">
+                <h1 class="project-title" data-i18n="project_detail_h1">Nombre del Proyecto</h1>
+                <p class="project-service" data-i18n="project_detail_service">Servicio Principal</p>
+                <div class="project-hero-img"></div>
+            </header>
+
+            <section class="project-content reveal">
+                <div class="project-grid-info">
+                    <div class="project-main-text">
+                        <h2 data-i18n="project_detail_about_title">Sobre el Proyecto</h2>
+                        <p data-i18n="project_detail_about_desc">Esta es una página base para tus proyectos. Aquí puedes
+                            detallar el desafío, la solución implementada y los resultados obtenidos para este cliente
+                            específico.</p>
+
+                        <h2 data-i18n="project_detail_results_title">Resultados Clave</h2>
+                        <ul class="results-list">
+                            <li><strong data-i18n="result_1_label">Métrica 1:</strong> <span
+                                    data-i18n="result_1_val">+50% incremento</span></li>
+                            <li><strong data-i18n="result_2_label">Métrica 2:</strong> <span
+                                    data-i18n="result_2_val">+100% visibilidad</span></li>
+                            <li><strong data-i18n="result_3_label">Métrica 3:</strong> <span
+                                    data-i18n="result_3_val">ROI optimizado</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Rafael González Jaramillo. <span data-i18n="footer_rights">Todos los derechos
+                    reservados.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

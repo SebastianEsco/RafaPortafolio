@@ -1,0 +1,67 @@
+:root {
+    /* Primary Colors - Serious & Modern Navy/Slate */
+    --primary-color: #0F172A;
+    --primary-light: #1E293B;
+    --accent-color: #3B82F6;
+    /* Bright Blue for growth/tech */
+    --accent-hover: #2563EB;
+
+    /* Neutral Colors */
+    --bg-dark: #020617;
+    --text-main: #F1F5F9;
+    --text-muted: #94A3B8;
+    --white: #FFFFFF;
+
+    /* Layout */
+    --container-max-width: 1200px;
+    --navbar-height: 80px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-mid: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 60px rgba(0, 0, 0, 0.2);
+    --shadow-blue: 0 10px 40px rgba(59, 130, 246, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
