@@ -95,6 +95,7 @@ const locales = {
         "nav_experience": "Experience",
         "nav_about": "About Me",
         "nav_contact": "Contact",
+        "nav_portfolio": "Portfolio",
         "contact_title": "Ready to scale your visibility?",
         "hero_title": "Senior SEO Consultant",
         "hero_subtitle": "Driving organic growth through cross-functional SEO strategies, clear data-driven processes, and AI-ready visibility.",
