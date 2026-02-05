@@ -227,7 +227,25 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Image Lightbox Logic
+    // Experience Expansion Logic
+    const expButtons = document.querySelectorAll('.btn-exp-more');
+    expButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.experience-item');
+            const isExpanded = item.classList.toggle('expanded');
+
+            // Sync with i18n system
+            const labelSpan = btn.querySelector('[data-i18n]');
+            if (labelSpan && window.i18n) {
+                const key = isExpanded ? 'exp_see_less' : 'exp_see_more';
+                labelSpan.setAttribute('data-i18n', key);
+                labelSpan.textContent = window.i18n.t(key);
+            }
+
+            btn.setAttribute('aria-expanded', isExpanded);
+        });
+    });
+
     const initLightbox = () => {
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox-overlay';

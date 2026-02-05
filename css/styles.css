@@ -698,6 +698,75 @@ a {
 
 .exp-desc {
     color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    /* Re-added margin for separation from details/button */
+}
+
+/* Experience Expansion */
+.exp-details {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.experience-item.expanded .exp-details {
+    grid-template-rows: 1fr;
+}
+
+.exp-list {
+    min-height: 0;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 0.5rem;
+}
+
+.exp-list li {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.2rem;
+    line-height: 1.5;
+}
+
+.exp-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.btn-exp-more {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.btn-exp-more:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.btn-exp-more i {
+    font-size: 0.7rem;
+    transition: transform 0.4s ease;
+}
+
+.experience-item.expanded .btn-exp-more i {
+    transform: rotate(180deg);
 }
 
 /* Contact Section */
@@ -816,6 +885,8 @@ a {
     transition: var(--transition-mid);
     position: relative;
     overflow: hidden;
+    text-align: center;
+    /* Centered all content */
 }
 
 .contact-card::before {
@@ -831,34 +902,82 @@ a {
 .contact-card:hover {
     border-color: rgba(255, 255, 255, 0.15);
     background: rgba(30, 41, 59, 0.5);
+    transform: translateY(-5px);
 }
 
 .contact-description {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    /* Slightly larger */
     color: var(--white);
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     font-weight: 500;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-buttons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 3rem;
+    /* More spacing */
+    margin-bottom: 1rem;
 }
 
 .contact-btn {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    /* Scaled up icons */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    color: var(--white);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    /* Larger icon size */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background: rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.email-btn {
+    background: rgba(30, 41, 59, 0.6);
+    color: var(--white);
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.whatsapp-btn {
+    background: rgba(30, 41, 59, 0.6);
+    color: #25D366;
+    border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+.contact-btn:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.email-btn:hover {
+    background: var(--accent-color);
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+    border-color: var(--accent-color);
+}
+
+.whatsapp-btn:hover {
+    background: #25D366;
+    color: white;
+    box-shadow: 0 0 40px rgba(37, 211, 102, 0.5);
+    border-color: #25D366;
+}
+
+width: 70px;
+height: 70px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.8rem;
+color: var(--white);
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+background: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-btn i {
